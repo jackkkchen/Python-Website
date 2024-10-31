@@ -1,0 +1,23 @@
+{
+  "name": "python_web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "core-js": "^3.25.3",
+    "nuxt": "^2.15.8",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "push-dir": "^0.4.1"
+  }
+}
