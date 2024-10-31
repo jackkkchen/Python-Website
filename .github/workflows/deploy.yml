@@ -3,12 +3,18 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # 或者 master，取决于您的默认分支名
+      - main
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
+    # 添加权限配置
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout 🛎️
@@ -18,9 +24,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'  # 添加 npm 缓存
 
       - name: Install Dependencies
         run: npm install
+        
+      - name: Install @nuxt/content  # 确保安装 content 模块
+        run: npm install @nuxt/content
 
       - name: Generate Static Files 🔧
         run: npm run generate
@@ -30,3 +40,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          commit_message: 'deploy: ${{ github.event.head_commit.message }}'
