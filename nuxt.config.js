@@ -12,7 +12,7 @@ export default {
         searchDepth: 3
       },
       prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css'
+        theme: false
       }
     },
     nestedProperties: ['author.name']
@@ -21,6 +21,9 @@ export default {
   router: {
     base: '/Python-Website/'
   },
+  css: [
+    'prism-themes/themes/prism-material-oceanic.css' // 在这里引入主题
+  ],
   
   generate: {
     fallback: true,

@@ -10,7 +10,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     
-    # 添加权限配置
     permissions:
       contents: write
       pages: write
@@ -24,12 +23,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'  # 添加 npm 缓存
+          cache: 'npm'
 
       - name: Install Dependencies
         run: npm install
         
-      - name: Install @nuxt/content  # 确保安装 content 模块
+      - name: Install @nuxt/content
         run: npm install @nuxt/content
 
       - name: Generate Static Files 🔧

@@ -9,12 +9,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxt/content": "^1.15.1",
     "core-js": "^3.25.3",
     "nuxt": "^2.15.8",
-    "@nuxt/content": "^1.15.1",
+    "prism-themes": "^1.9.0",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
+    "vue-template-compiler": "^2.7.10",
+    "prism-themes": "^1.9.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
