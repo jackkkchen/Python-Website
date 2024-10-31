@@ -1,9 +1,11 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: 'static',
+  
+  // 只保留一个 modules 配置
   modules: ['@nuxt/content'],
+  
   content: {
-    // 配置选项
     markdown: {
       toc: {
         depth: 3,
@@ -11,12 +13,15 @@ export default {
       }
     }
   },
+  
   router: {
     base: '/Python-Website/'
   },
+  
   generate: {
-    fallback: true // 对于404页面使用SPA fallback
+    fallback: true
   },
+  
   head: {
     title: 'python_web',
     htmlAttrs: {
@@ -33,26 +38,10 @@ export default {
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
+  css: [],
+  plugins: [],
   components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-  ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  buildModules: [],
+  
+  build: {}
 }
