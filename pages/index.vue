@@ -5,9 +5,9 @@
     <div class="grid gap-4">
       <ContentList path="/tutorial" v-slot="{ list }">
         <div v-for="article in list" :key="article._path" 
-             class="p-4 border rounded hover:shadow-lg">
-          <NuxtLink :to="article._path">
-            <h2 class="text-xl font-semibold">{{ article.title }}</h2>
+             class="p-4 border rounded hover:shadow-lg transition duration-300">
+          <NuxtLink :to="article._path" class="block">
+            <h2 class="text-xl font-semibold mb-2">{{ article.title }}</h2>
             <p class="text-gray-600">{{ article.description }}</p>
           </NuxtLink>
         </div>
@@ -15,3 +15,25 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'IndexPage'
+}
+</script>
+
+<style>
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.hover\:shadow-lg:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+</style>
