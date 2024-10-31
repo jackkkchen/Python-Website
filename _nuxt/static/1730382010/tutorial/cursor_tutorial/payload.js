@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tutorial/cursor_tutorial", {data:[{}],fetch:{},mutations:void 0});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tutorial/1.preface", {data:[{}],fetch:{},mutations:void 0});
