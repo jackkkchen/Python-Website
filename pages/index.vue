@@ -2,6 +2,17 @@
   <div class="container mx-auto px-4">
     <h1 class="text-3xl font-bold mb-8">Python 教程</h1>
     
+    <!-- 添加导航链接 -->
+    <nav class="mb-8">
+      <NuxtLink 
+        to="/tutorial" 
+        class="text-blue-600 hover:text-blue-800"
+      >
+        进入教程
+      </NuxtLink>
+    </nav>
+    
+    <!-- 教程列表 -->
     <div class="grid gap-4">
       <ContentList path="/tutorial" v-slot="{ list }">
         <div v-for="article in list" :key="article._path" 
@@ -15,25 +26,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'IndexPage'
-}
-</script>
-
-<style>
-.container {
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.hover\:shadow-lg:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-</style>
