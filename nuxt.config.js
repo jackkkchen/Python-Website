@@ -10,8 +10,12 @@ export default {
       toc: {
         depth: 3,
         searchDepth: 3
+      },
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
       }
-    }
+    },
+    nestedProperties: ['author.name']
   },
   
   router: {
@@ -19,7 +23,12 @@ export default {
   },
   
   generate: {
-    fallback: true
+    fallback: true,
+    async routes() {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('tutorial').fetch()
+      return files.map(file => file.path)
+    }
   },
   
   head: {
