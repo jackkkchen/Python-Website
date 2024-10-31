@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002FPython-Website\u002F_nuxt\u002Fstatic\u002F1730382455",layout:"default",error:a,serverRendered:true,routePath:"\u002Ftutorial\u002F1.preface",config:{_app:{basePath:"\u002FPython-Website\u002F",assetsPath:"\u002FPython-Website\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"ddfdd97f"}}}}(null));
